@@ -11,9 +11,12 @@
     text-align: center;
 }
 
-.gallery .image {
-    max-height: 70%;
-    overflow: hidden;
+.gallery .image img {
+    width: 150px;
+    /* or whatever size the other boxes are */
+    height: 100px;
+    object-fit: cover;
+    /* Ensures the image covers the box without distortion */
 }
 
 .gallery img {
