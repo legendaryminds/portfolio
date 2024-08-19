@@ -12,9 +12,9 @@
 }
 
 .gallery .image img {
-    width: 150px;
+    width: 300px;
     /* or whatever size the other boxes are */
-    height: 100px;
+    height: 300px;
     object-fit: cover;
     /* Ensures the image covers the box without distortion */
 }
