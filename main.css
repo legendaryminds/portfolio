@@ -1,40 +1,53 @@
-/* Add this to your main.css or within a <style> block in the HTML head */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .gallery article {
-    width: 100%;
-    max-width: 300px;
-    /* Adjust the width according to your design */
-    height: 300px;
-    /* Make sure height is uniform */
-    display: inline-block;
+    flex: 1 1 calc(33.333% - 20px);
+    /* 3 items per row with some spacing */
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
     margin-bottom: 20px;
-    vertical-align: top;
     text-align: center;
 }
 
+.gallery .image {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    /* This creates a square aspect ratio */
+    position: relative;
+}
+
 .gallery .image img {
-    width: 300px;
-    /* or whatever size the other boxes are */
-    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     /* Ensures the image covers the box without distortion */
 }
 
-.gallery img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    /* Ensures the image covers the box without stretching */
-}
-
 .gallery header {
-    padding-top: 10px;
+    margin-top: 10px;
     font-size: 1em;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .gallery article {
-        width: 100%;
-        /* Full width on smaller screens */
-        height: auto;
+        flex: 1 1 calc(50% - 20px);
+        /* 2 items per row on smaller screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery article {
+        flex: 1 1 100%;
+        /* 1 item per row on very small screens */
+        max-width: 100%;
     }
 }
