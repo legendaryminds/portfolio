@@ -36,6 +36,11 @@
     font-size: 1em;
 }
 
+.gallery header p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 @media screen and (max-width: 768px) {
     .gallery article {
         flex: 1 1 calc(50% - 20px);

@@ -1805,6 +1805,12 @@ input, select, textarea {
 				transform: translateY(7em);
 			}
 
+						/* Custom spacing for gallery articles */
+						.gallery article header p {
+							margin: 0 10px;
+							/* Add horizontal spacing to prevent text overlap */
+						}
+
 		@media screen and (max-width: 480px) {
 
 			.gallery {
